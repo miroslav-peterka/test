@@ -1,0 +1,17 @@
+<li>
+  {{!--
+    currentNavNode.file
+  --}}
+  {{#if file}}
+  <a href="{{file.nav_path}}" class="link">{{file.title}}</a>
+  {{else}}
+  <span>{{name}}</span>
+  {{/if}}
+  {{#if children}}
+  <ul class="links">
+    {{#each children}}
+    {{> nav__children}}
+    {{/each}}
+  </ul>
+  {{/if}}
+</li>
